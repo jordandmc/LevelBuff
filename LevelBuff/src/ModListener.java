@@ -2,10 +2,10 @@ import net.minecraft.server.EntityExperienceOrb;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.entity.EntityListener;
 
-public class MobListener extends EntityListener{
+public class ModListener extends EntityListener{
 	private LevelBuff plugin;
 	
-	public MobListener(LevelBuff instance){
+	public ModListener(LevelBuff instance){
 		plugin = instance;
 		
 		
