@@ -1,3 +1,5 @@
+package org.servegame.jordandmc.LevelBuff;
+
 import org.bukkit.event.Event;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -7,7 +9,6 @@ public class LevelBuff extends JavaPlugin{
 	
 	@Override
 	public void onDisable() {
-		// TODO Auto-generated method stub
 		
 	}
 
