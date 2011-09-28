@@ -16,7 +16,7 @@ public class LevelBuff extends JavaPlugin{
 		PluginManager pm = getServer().getPluginManager();
 		pm.registerEvent(Event.Type.PLAYER_PICKUP_ITEM, playerListener, Event.Priority.Normal, this);
 		
-		addArmorRecipe();
+		addRepairRecipes();
 	}
 	
 	@Override
@@ -24,13 +24,18 @@ public class LevelBuff extends JavaPlugin{
 		
 	}
 	
-	private void addArmorRecipe(){
+	private void addRepairRecipes(){
+		int[] items = new int[]{256, 257, 258, 267, 268, 
+				269, 270, 271, 272, 273, 274, 275, 276, 277, 278,
+				279, 283, 284, 285, 286, 290, 291, 292,	293, 294,
+				298, 299, 300, 301, 302, 303, 304, 305, 306, 307,
+				308, 309, 310, 311, 312, 313, 314, 315, 316, 317};
 		ShapelessRecipe recipe;
 		Server server = getServer();
 		
-		for(int i=298; i < 318; i++){
-			recipe = new ShapelessRecipe(new ItemStack(i));
-			recipe.addIngredient(new MaterialData(i));
+		for(int i=0; i < items.length; i++){
+			recipe = new ShapelessRecipe(new ItemStack(items[i]));
+			recipe.addIngredient(new MaterialData(items[i]));
 			server.addRecipe(recipe);
 		}
 	}
